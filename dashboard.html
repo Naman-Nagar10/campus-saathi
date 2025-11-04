@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Campus Saathi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                🎓 Campus Saathi
+            </a>
+            <div class="d-flex align-items-center">
+                <button class="theme-toggle me-3" id="themeToggle" title="Toggle theme">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <a href="index.html" class="btn btn-outline-primary btn-sm me-2">Live Demo</a>
+                <button class="btn btn-success btn-sm" onclick="startPresentation()">🎬 Start Presentation</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <!-- Project Overview -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h1 class="display-5 mb-4">Campus Saathi - Project Presentation</h1>
+                        <p class="lead mb-4">A complete campus management platform built in 5 days</p>
+                        <div class="row text-center">
+                            <div class="col-md-3">
+                                <div class="stat-card">
+                                    <h3>5</h3>
+                                    <p>Days Development</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card">
+                                    <h3>4</h3>
+                                    <p>Main Features</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card">
+                                    <h3>100%</h3>
+                                    <p>Functional</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="stat-card">
+                                    <h3>2</h3>
+                                    <p>Themes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Demo -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="text-center mb-4">🎯 Features Demo</h2>
+                <div class="row">
+                    <!-- Campus Shop -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 feature-demo-card">
+                            <div class="card-body">
+                                <h4>🛍️ Campus Shop</h4>
+                                <p class="text-muted">Buy and sell second-hand items with campus community</p>
+                                <div class="demo-steps">
+                                    <div class="step">1. Visit Shop page</div>
+                                    <div class="step">2. Fill item details and submit</div>
+                                    <div class="step">3. Item appears instantly in shop</div>
+                                    <div class="step">4. Contact sellers directly</div>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="shop.html" class="btn btn-primary">Live Test</a>
+                                    <button class="btn btn-outline-primary" onclick="highlightFeature('shop')">Highlight</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notes Sharing -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 feature-demo-card">
+                            <div class="card-body">
+                                <h4>📚 Notes Sharing</h4>
+                                <p class="text-muted">Share and download academic materials</p>
+                                <div class="demo-steps">
+                                    <div class="step">1. Upload notes with details</div>
+                                    <div class="step">2. Automatic download tracking</div>
+                                    <div class="step">3. Search and filter notes</div>
+                                    <div class="step">4. Download as text files</div>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="notes.html" class="btn btn-primary">Live Test</a>
+                                    <button class="btn btn-outline-primary" onclick="highlightFeature('notes')">Highlight</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Events -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 feature-demo-card">
+                            <div class="card-body">
+                                <h4>📅 Events Management</h4>
+                                <p class="text-muted">Campus events and activities</p>
+                                <div class="demo-steps">
+                                    <div class="step">1. Add new events</div>
+                                    <div class="step">2. Student registration</div>
+                                    <div class="step">3. Share events</div>
+                                    <div class="step">4. Track participation</div>
+                                </div>
+                                <div class="mt-3">
+                                    <a href="events.html" class="btn btn-primary">Live Test</a>
+                                    <button class="btn btn-outline-primary" onclick="highlightFeature('events')">Highlight</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Theme System -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100 feature-demo-card">
+                            <div class="card-body">
+                                <h4>🎨 Theme System</h4>
+                                <p class="text-muted">Twitter-like dark/light themes</p>
+                                <div class="demo-steps">
+                                    <div class="step">1. Click theme toggle button</div>
+                                    <div class="step">2. Auto-saves preference</div>
+                                    <div class="step">3. Works on all pages</div>
+                                    <div class="step">4. Smooth transitions</div>
+                                </div>
+                                <div class="mt-3">
+                                    <button onclick="toggleSiteTheme()" class="btn btn-primary">Test Theme</button>
+                                    <button class="btn btn-outline-primary" onclick="highlightFeature('theme')">Highlight</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Details -->
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>💻 Technical Stack</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li>✅ <strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                            <li>✅ <strong>Framework:</strong> Bootstrap 5</li>
+                            <li>✅ <strong>Storage:</strong> LocalStorage API</li>
+                            <li>✅ <strong>Icons:</strong> Emoji & Unicode</li>
+                            <li>✅ <strong>Hosting:</strong> GitHub Pages</li>
+                            <li>✅ <strong>Responsive:</strong> Mobile-First Design</li>
+                            <li>✅ <strong>Theming:</strong> CSS Variables</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>🚀 Future Enhancements</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li>🔜 <strong>MERN Stack:</strong> MongoDB, Express, React, Node.js</li>
+                            <li>🔜 <strong>Real-time Chat:</strong> Socket.io</li>
+                            <li>🔜 <strong>File Upload:</strong> PDF, Images support</li>
+                            <li>🔜 <strong>User Auth:</strong> Login/Registration</li>
+                            <li>🔜 <strong>Mobile App:</strong> React Native</li>
+                            <li>🔜 <strong>Notifications:</strong> Push notifications</li>
+                            <li>🔜 <strong>Payments:</strong> Online payment integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Demo Buttons -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h4 class="mb-4">🎮 Live Demo Sections</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="index.html" class="btn btn-primary btn-lg">🏠 Homepage</a>
+                            <a href="shop.html" class="btn btn-success btn-lg">🛍️ Campus Shop</a>
+                            <a href="notes.html" class="btn btn-info btn-lg">📚 Notes Sharing</a>
+                            <a href="events.html" class="btn btn-warning btn-lg">📅 Events</a>
+                            <a href="contact.html" class="btn btn-secondary btn-lg">📞 Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Documentation -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>📋 Project Documentation</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <h6>🎯 Project Objective</h6>
+                                <p class="small">Create an integrated platform for students that addresses both academic and social needs of campus life</p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <h6>👥 Target Users</h6>
+                                <p class="small">All college students, teachers, and staff members. Designed specifically for campus community</p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <h6>⏱️ Development Time</h6>
+                                <p class="small">5 days - Rapid prototype development with focus on core functionality and user experience</p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <h6>💡 Key Features</h6>
+                                <p class="small">Second-hand marketplace, notes sharing, event management, theme system, responsive design</p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <h6>🛠️ Technology</h6>
+                                <p class="small">Pure frontend stack with localStorage for data persistence. No backend required for demo</p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <h6>📱 Compatibility</h6>
+                                <p class="small">Fully responsive design works on desktop, tablet, and mobile devices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2025 Campus Saathi - College Project</p>
+            <small>Developed with ❤️ for better campus life</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

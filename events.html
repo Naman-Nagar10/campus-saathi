@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Events - Campus Saathi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                🎓 Campus Saathi
+            </a>
+            <div class="d-flex align-items-center">
+                <button class="theme-toggle me-3" id="themeToggle" title="Toggle theme">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <a href="index.html" class="btn btn-outline-primary btn-sm">← Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-4">📅 Campus Events</h2>
+                <p class="text-center text-muted mb-5">Stay updated with all college events, workshops, and activities</p>
+                
+                <!-- Add Event Form -->
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <h4 class="mb-3">Add New Event</h4>
+                        <form id="eventForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="eventTitle" class="form-label">Event Title *</label>
+                                    <input type="text" class="form-control" id="eventTitle" required 
+                                           placeholder="e.g., Technical Fest, Cultural Night">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="eventOrganizer" class="form-label">Organizer *</label>
+                                    <input type="text" class="form-control" id="eventOrganizer" required 
+                                           placeholder="e.g., Computer Science Department">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="eventDate" class="form-label">Date *</label>
+                                    <input type="date" class="form-control" id="eventDate" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="eventTime" class="form-label">Time *</label>
+                                    <input type="time" class="form-control" id="eventTime" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventLocation" class="form-label">Location *</label>
+                                <input type="text" class="form-control" id="eventLocation" required 
+                                       placeholder="e.g., Main Auditorium, College Ground">
+                            </div>
+                            <div class="mb-3">
+                                <label for="eventDescription" class="form-label">Description *</label>
+                                <textarea class="form-control" id="eventDescription" rows="3" required 
+                                          placeholder="Detailed information about the event..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                ➕ Add Event
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="mb-5">
+                    <h4 class="mb-3">📢 Upcoming Events</h4>
+                    <div id="upcomingEvents" class="row">
+                        <!-- Upcoming events will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- All Events -->
+                <div>
+                    <h4 class="mb-3">All Events</h4>
+                    <div id="eventsContainer">
+                        <!-- All events will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>
