@@ -44,14 +44,21 @@
         }
 
         /* Navigation */
-        .navbar {
-            background-color: var(--bg-primary) !important;
-            border-bottom: 1px solid var(--border-color);
-            padding: 0.75rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+        /* Navigation Toggler Icon Fix */
+         .navbar-toggler {
+             border: 1px solid var(--border-color) !important;
+             padding: 4px 8px !important;
+         }
+
+         .navbar-toggler-icon {
+             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+             width: 1.2em !important;
+             height: 1.2em !important;
+         }
+
+         [data-theme="dark"] .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+         }
 
         .navbar-brand {
             color: var(--text-primary) !important;
@@ -551,3 +558,4 @@
     </script>
 </body>
  </html>
+
