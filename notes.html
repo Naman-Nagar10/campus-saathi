@@ -6,7 +6,7 @@
     <title>Notes Sharing - Campus Saathi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* ======== TWITTER-LIKE BLACK & WHITE THEME ======== */
+        /* Twitter-like Black & White Theme */
         :root {
             --bg-primary: #ffffff;
             --bg-secondary: #f7f9f9;
@@ -39,260 +39,237 @@
             background-color: var(--bg-primary);
             color: var(--text-primary);
             transition: all 0.3s ease;
-            margin: 0;
-            padding: 0;
         }
 
-        /* Navigation */
-        .navbar {
-            background-color: var(--bg-primary) !important;
-            border-bottom: 1px solid var(--border-color);
-            padding: 0.75rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar-brand {
-            color: var(--text-primary) !important;
-            font-weight: 700;
-            font-size: 1.3rem;
-        }
-
-        .navbar-nav .nav-link {
-            color: var(--text-primary) !important;
-            font-weight: 500;
-            margin: 0 4px;
-            border-radius: 20px;
-            padding: 8px 16px;
-            transition: all 0.2s ease;
-        }
-
-        .navbar-nav .nav-link:hover {
-            background-color: var(--bg-tertiary);
-        }
-
-        /* Navigation Toggler Icon */
         .navbar-toggler {
             border: 1px solid var(--border-color) !important;
-            padding: 4px 8px !important;
         }
 
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-            width: 1.2em !important;
-            height: 1.2em !important;
         }
 
         [data-theme="dark"] .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
         }
 
-        /* Theme Toggle */
-        .theme-toggle {
-            background: none;
-            border: none;
-            color: var(--text-primary);
-            cursor: pointer;
-            padding: 8px;
-            border-radius: 50%;
-            transition: all 0.2s ease;
-            font-size: 1.2rem;
-        }
-
-        /* Cards */
         .card {
             background-color: var(--bg-primary);
             border: 1px solid var(--border-color);
             border-radius: 16px;
             transition: all 0.2s ease;
-            box-shadow: var(--shadow);
-            margin-bottom: 1.5rem;
         }
 
-        .card:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Buttons */
         .btn {
             border-radius: 20px;
             font-weight: 600;
-            padding: 10px 20px;
-            border: none;
-            transition: all 0.2s ease;
-            font-size: 0.9rem;
         }
 
         .btn-primary {
             background-color: var(--accent-color);
             color: var(--bg-primary);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-1px);
-        }
-
-        .btn-success {
-            background-color: var(--success-color);
-            color: white;
-        }
-
-        /* Badges */
-        .badge {
-            font-size: 0.7rem;
-            font-weight: 600;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
-            
-            .navbar-nav .nav-link {
-                margin: 2px 0;
-                text-align: center;
-            }
-            
-            .btn {
-                padding: 12px 20px;
-                font-size: 0.9rem;
-                margin: 5px;
-            }
+            border: none;
         }
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                🎓 Campus Saathi
-            </a>
-            
+            <a class="navbar-brand fw-bold" href="index.html">🎓 Campus Saathi</a>
             <div class="d-flex align-items-center">
-                <button class="theme-toggle me-3" id="themeToggle" title="Toggle theme">
+                <button class="theme-toggle me-3" id="themeToggle">
                     <span id="themeIcon">🌙</span>
                 </button>
-                
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Campus Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="notes.html">Notes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="events.html">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="dashboard.html">Dashboard</a>
-                    </li>
-                </ul>
+                <a href="index.html" class="btn btn-outline-primary btn-sm">← Back to Home</a>
             </div>
         </div>
     </nav>
 
     <div class="container mt-4">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="text-center mb-4">📚 Notes Sharing</h2>
-                <p class="text-center text-muted mb-5">Share and download study materials with PDF support</p>
-                
-                <!-- Upload Notes Form -->
-                <div class="card mb-5">
-                    <div class="card-body">
-                        <h4 class="mb-3">Upload New Notes</h4>
-                        <form id="notesForm">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="subjectName" class="form-label">Subject Name *</label>
-                                    <input type="text" class="form-control" id="subjectName" required 
-                                           placeholder="e.g., Mathematics, Physics, etc.">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="topicName" class="form-label">Topic Name *</label>
-                                    <input type="text" class="form-control" id="topicName" required 
-                                           placeholder="e.g., Calculus, Organic Chemistry, etc.">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="notesDescription" class="form-label">Description *</label>
-                                <textarea class="form-control" id="notesDescription" rows="3" required 
-                                          placeholder="Brief description of the notes content..."></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="uploaderName" class="form-label">Your Name *</label>
-                                <input type="text" class="form-control" id="uploaderName" required 
-                                       placeholder="e.g., Rahul Kumar">
-                            </div>
-                            <button type="submit" class="btn btn-primary">
-                                📝 Upload Notes
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Notes List -->
-                <div class="row mb-4">
-                    <div class="col-12">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h4>Available Notes</h4>
-                            <input type="text" class="form-control form-control-sm" id="searchNotes" 
-                                   placeholder="Search notes..." style="width: 300px;">
+        <h2 class="text-center mb-4">📚 Notes Sharing</h2>
+        
+        <!-- Upload Form -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4>Upload New Notes</h4>
+                <form id="notesForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" id="subjectName" placeholder="Subject Name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" id="topicName" placeholder="Topic Name" required>
                         </div>
                     </div>
-                </div>
-
-                <div id="notesContainer" class="row">
-                    <!-- Notes will be loaded here dynamically -->
-                </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" id="notesDescription" placeholder="Description" rows="2" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="uploaderName" placeholder="Your Name" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">📝 Upload Notes</button>
+                </form>
             </div>
+        </div>
+
+        <!-- Notes List -->
+        <div class="row">
+            <div class="col-12">
+                <h4>Available Notes</h4>
+                <input type="text" class="form-control mb-3" id="searchNotes" placeholder="Search notes...">
+            </div>
+        </div>
+
+        <div id="notesContainer" class="row">
+            <!-- Notes will appear here -->
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Made for students, by students</h5>
-                    <p class="mb-0">Your all-in-one campus companion</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="shop.html" class="text-white text-decoration-none">Campus Shop</a></li>
-                        <li><a href="notes.html" class="text-white text-decoration-none">Notes Sharing</a></li>
-                        <li><a href="events.html" class="text-white text-decoration-none">Events</a></li>
-                        <li><a href="contact.html" class="text-white text-decoration-none">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="my-3">
-            <div class="text-center">
-                <p class="mb-1">&copy; 2025 Campus Saathi - College Project</p>
-                <small class="text-white-50">Developed with ❤️ for better campus life</small>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // Simple Notes Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            loadNotes();
+            
+            document.getElementById('notesForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                addNote();
+            });
+
+            document.getElementById('searchNotes').addEventListener('input', searchNotes);
+        });
+
+        function loadNotes() {
+            const notes = JSON.parse(localStorage.getItem('campusNotes')) || [];
+            const container = document.getElementById('notesContainer');
+            
+            if (notes.length === 0) {
+                container.innerHTML = `
+                    <div class="col-12">
+                        <div class="card text-center py-5">
+                            <div class="card-body">
+                                <h5 class="text-muted">No notes available</h5>
+                                <p class="text-muted">Upload your first notes!</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = '';
+            notes.forEach(note => {
+                const noteCard = `
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">${note.subject}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">${note.topic}</h6>
+                                <p class="card-text small">${note.description}</p>
+                                <div class="mt-3">
+                                    <small class="text-muted">By: ${note.uploader}</small><br>
+                                    <small class="text-muted">Downloads: ${note.downloads || 0}</small>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-success btn-sm w-100" onclick="downloadNote(${note.id})">
+                                    📥 Download Notes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += noteCard;
+            });
+        }
+
+        function addNote() {
+            const subject = document.getElementById('subjectName').value;
+            const topic = document.getElementById('topicName').value;
+            const description = document.getElementById('notesDescription').value;
+            const uploader = document.getElementById('uploaderName').value;
+
+            if (subject && topic && description && uploader) {
+                const notes = JSON.parse(localStorage.getItem('campusNotes')) || [];
+                
+                const newNote = {
+                    id: Date.now(),
+                    subject: subject,
+                    topic: topic,
+                    description: description,
+                    uploader: uploader,
+                    date: new Date().toLocaleDateString(),
+                    downloads: 0
+                };
+
+                notes.unshift(newNote);
+                localStorage.setItem('campusNotes', JSON.stringify(notes));
+                
+                document.getElementById('notesForm').reset();
+                loadNotes();
+                alert('✅ Notes uploaded successfully!');
+            } else {
+                alert('❌ Please fill all fields');
+            }
+        }
+
+        function downloadNote(noteId) {
+            const notes = JSON.parse(localStorage.getItem('campusNotes')) || [];
+            const note = notes.find(n => n.id === noteId);
+            
+            if (note) {
+                // Create downloadable content
+                const content = `
+CAMPUS SAATHI - NOTES
+=====================
+
+Subject: ${note.subject}
+Topic: ${note.topic}
+Description: ${note.description}
+Uploaded By: ${note.uploader}
+Date: ${note.date}
+
+Thank you for using Campus Saathi!
+                `;
+
+                // Create and trigger download
+                const blob = new Blob([content], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${note.subject}_${note.topic}.txt`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                // Update download count
+                const updatedNotes = notes.map(n => {
+                    if (n.id === noteId) {
+                        return { ...n, downloads: (n.downloads || 0) + 1 };
+                    }
+                    return n;
+                });
+                localStorage.setItem('campusNotes', JSON.stringify(updatedNotes));
+                
+                loadNotes();
+                alert('📥 Notes downloaded successfully!');
+            }
+        }
+
+        function searchNotes() {
+            const searchTerm = document.getElementById('searchNotes').value.toLowerCase();
+            const notes = document.querySelectorAll('.col-md-6');
+            
+            notes.forEach(note => {
+                const text = note.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    note.style.display = 'block';
+                } else {
+                    note.style.display = 'none';
+                }
+            });
+        }
+
         // Theme Management
         class ThemeManager {
             constructor() {
@@ -329,147 +306,8 @@
             }
         }
 
-        // Notes functionality with PDF Download
-        document.addEventListener('DOMContentLoaded', function() {
-            new ThemeManager();
-            displayNotes();
-            
-            document.getElementById('notesForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                uploadNote();
-            });
-            
-            document.getElementById('searchNotes').addEventListener('input', filterNotes);
-        });
-
-        function uploadNote() {
-            const subject = document.getElementById('subjectName').value;
-            const topic = document.getElementById('topicName').value;
-            const description = document.getElementById('notesDescription').value;
-            const uploader = document.getElementById('uploaderName').value;
-
-            if (subject && topic && description && uploader) {
-                let notes = JSON.parse(localStorage.getItem('campusNotes')) || [];
-                
-                const newNote = {
-                    id: Date.now(),
-                    subject: subject,
-                    topic: topic,
-                    description: description,
-                    uploader: uploader,
-                    date: new Date().toISOString().split('T')[0],
-                    downloads: 0
-                };
-                
-                notes.unshift(newNote);
-                localStorage.setItem('campusNotes', JSON.stringify(notes));
-                
-                document.getElementById('notesForm').reset();
-                displayNotes();
-                showNotification('✅ Notes uploaded successfully!', 'success');
-            } else {
-                showNotification('❌ Please fill all fields', 'error');
-            }
-        }
-
-        function displayNotes() {
-            const notesContainer = document.getElementById('notesContainer');
-            const notes = JSON.parse(localStorage.getItem('campusNotes')) || [];
-            
-            if (notes.length === 0) {
-                notesContainer.innerHTML = `
-                    <div class="col-12">
-                        <div class="card text-center py-5">
-                            <div class="card-body">
-                                <h5 class="text-muted">No notes available yet</h5>
-                                <p class="text-muted mb-3">Be the first to share your notes!</p>
-                                <button class="btn btn-primary" onclick="document.getElementById('notesForm').scrollIntoView()">
-                                    Upload Notes
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                return;
-            }
-            
-            notesContainer.innerHTML = '';
-            
-            notes.forEach(note => {
-                const hasPDF = checkPDFAvailable(note.subject);
-                const downloadButton = hasPDF ? 
-                    `<button class="btn btn-success btn-sm" onclick="downloadPDF(${note.id})">📄 Download PDF</button>` :
-                    `<button class="btn btn-outline-primary btn-sm" onclick="downloadNote(${note.id})">📝 Download Text</button>`;
-                
-                const noteCard = `
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card h-100 note-item">
-                            <div class="card-body">
-                                <h5 class="card-title">${note.subject}</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">${note.topic}</h6>
-                                <p class="card-text small text-muted">${note.description}</p>
-                                ${hasPDF ? '<span class="badge bg-success mb-2">PDF Available</span>' : ''}
-                                <div class="note-meta mt-3">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <small class="text-muted">
-                                            <strong>Uploaded by:</strong> ${note.uploader}
-                                        </small>
-                                        <small class="text-muted">${formatDate(note.date)}</small>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center mt-2">
-                                        <small class="text-muted">
-                                            <strong>Downloads:</strong> ${note.downloads || 0}
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer bg-transparent">
-                                <div class="d-grid gap-2">
-                                    ${downloadButton}
-                                    <button class="btn btn-outline-secondary btn-sm" onclick="viewNoteDetails(${note.id})">
-                                        👁️ View Details
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                notesContainer.innerHTML += noteCard;
-            });
-        }
-
-        function checkPDFAvailable(subject) {
-            const pdfSubjects = [
-                "Mathematics", "Physics", "Chemistry", "Computer Science", 
-                "Engineering", "Biology", "Economics", "Business Studies"
-            ];
-            return pdfSubjects.includes(subject);
-        }
-
-        function downloadPDF(noteId) {
-            const notes = JSON.parse(localStorage.getItem('campusNotes')) || [];
-            const note = notes.find(n => n.id === noteId);
-            
-            if (note) {
-                // PDF files mapping - Real PDF links
-                const pdfFiles = {
-                    "Mathematics": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-                    "Physics": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-                    "Chemistry": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-                    "Computer Science": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-                    "Engineering": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-                    "Biology": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-                    "Economics": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-                    "Business Studies": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-                };
-                
-                const pdfUrl = pdfFiles[note.subject] || "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
-                
-                // Open PDF in new tab
-                window.open(pdfUrl, '_blank');
-                
-                // Update download count
-                const updatedNotes = notes.map(n => {
-                    if (n.id === noteId) {
-                        retu
-
+        // Initialize theme
+        new ThemeManager();
+    </script>
+</body>
+                            </html>                             
