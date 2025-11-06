@@ -1,4 +1,4 @@
-/* Twitter-like Black & White Theme */
+
 :root {
   --bg-primary: #ffffff;
   --bg-secondary: #f7f9f9;
@@ -304,4 +304,5 @@ footer {
         border: 1px solid #000 !important;
         break-inside: avoid;
     }
+
 }
